@@ -1,0 +1,552 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>LEGEND</title>
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="homepage" content="The HTML5 Herald">
+        <meta name="sam brocklehurst" content="SitePoint">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+        <link href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.css" rel="stylesheet" type="text/css">
+        <link href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css" rel="stylesheet" type="text/css">
+        <link href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="style.css" type="text/css">
+    </head>
+    <body>
+        <header>
+            <div class="header-container">
+                <div class="logo">
+                    <img src="img/LEGEND-logo.svg" height="50">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#">What's On?</a></li>
+                        <li><a href="#">Cinemas</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Offers</a></li>
+                    </ul>
+                </nav>
+                <div class="search">
+                    <img src="img/search.svg" height="14" class="search-icon">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search" class="search-input">
+                        <img src="img/close.svg" height="14" class="close-icon">
+                    </div>
+                </div>
+                <ul class="quick-book-ul">
+                    <li class="quick-book"><span class="quick-book-txt">Quick Book</span>
+                        <div class="menu-sub">
+                            <div class="quick-book-items" id="quick-book-venue">
+                                <div class="quick-book-items-header">Venue</div>
+                                <div class="quick-book-items-drop-down" id="venue-drop-down">Choose a venue</div>
+                                <div class="quick-book-menu">
+                                    <div class="search-container">
+                                        <input class="drop-down-search" type="text" id="drop-down-search" placeholder="Search for a venue...">
+                                    </div>
+                                    <ul class="venue-select">
+                                        <li>Birmingham Great Park</li>
+                                        <li>Sutton Coldfield</li>
+                                        <li>Bishop's Stortford</li>
+                                        <li>Catterick Garrison</li>
+                                        <li>Clydebank</li>
+                                        <li>High Wycombe</li>
+                                        <li>Ipswich</li>
+                                        <li>London Haymarket</li>
+                                        <li>Slough</li>
+                                        <li>Sunderland</li>
+                                        <li>Sutton</li>
+                                        <li>Swindon</li>
+                                        <li>Walthamstow</li>
+                                        <li>Wigan</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="quick-book-items" id="quick-book-film">
+                                <div class="quick-book-items-header">Film</div>
+                                <div class="quick-book-items-drop-down" id="film-drop-down">Choose a film</div>
+                                <div class="quick-book-menu">
+                                    <div class="search-container">
+                                        <input class="drop-down-search" type="text" id="drop-down-search" placeholder="Search for a film...">
+                                    </div>
+                                    <ul class="film-select">
+                                        <li>Ant-Man and the Wasp</li>
+                                        <li>Incredibles 2</li>
+                                        <li>Jurassic World: Fallen Kingdom</li>
+                                        <li>The Meg</li>
+                                        <li>Christopher Robin</li>
+                                        <li>Hotel Transylvania 3: Summer Vacation</li>
+                                        <li>The Equalizer 2</li>
+                                        <li>BlacKkKlansman</li>
+                                        <li>Unfriended: Dark Web</li>
+                                        <li>Marvel 10th: The Avengers</li>
+                                        <li>Marvel 10th: Captain America: Civil War</li>
+                                        <li>Marvel 10th: Avengers: Infinity War</li>
+                                        <li>Marvel 10th: Guardians of the Galaxy Vol. 2</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="quick-book-items" id="quick-book-date">
+                                <div class="quick-book-items-header">Date</div>
+                                <div class="quick-book-items-drop-down inactive" id="date-drop-down">Choose a date</div>
+                                <div class="quick-book-menu">
+                                    <ul class="date-select">
+                                        <li class="li-today"></li>
+                                        <li class="li-tomorrow"></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="quick-book-items" id="quick-book-time">
+                                <div class="quick-book-items-header">Time</div>
+                                <div class="quick-book-items-drop-down inactive" id="time-drop-down">Choose a time</div>
+                                <div class="quick-book-menu">
+                                    <ul class="time-select">
+                                        <li>11:00  AM  2D</li>
+                                        <li>12:20  PM  2D</li>
+                                        <li>4:00  PM  2D</li>
+                                        <li>6:00  PM  2D</li>
+                                        <li>8:15  PM  2D</li>
+                                        <li class="over-18s">11:30 PM 2D</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <button class="quick-book-btn">Search</button>
+                        </div>
+                    </li>
+                </ul>
+                <a id="burger-nav"></a>
+                <div id="resize">
+                    <a id="cross-nav"></a>
+                    <div id="menu">
+                        <ul>
+                            <li><a href="#">What's On?</a></li>
+                            <li><a href="#">Cinemas</a></li>
+                            <li><a href="#">Events</a></li>
+                            <li><a href="#">Offers</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section>
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="img/antmanwasp-hero.jpg" alt="First slide">
+                            <div class="carousel-item-div">
+                                <div class="hero-txt">
+                                    <div class="release-type">
+                                        <p>MARVEL STUDIOS</p>
+                                    </div>
+                                    <div class="movie-title">
+                                        <h2>Ant-Man and the Wasp</h2>
+                                    </div>
+                                    <div class="movie-desc">
+                                        <p>As Scott Lang balances being both a Super Hero and a father, Hope van Dyne and Dr. Hank Pym present an urgent new mission that finds the Ant-Man fighting alongside The Wasp to uncover secrets from their past.</p>
+                                    </div>
+                                    <button class="btn-hero">Get Tickets</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="img/kin-hero.jpg" alt="Third slide">
+                            <div class="carousel-item-div">
+                                <div class="hero-txt">
+                                    <div class="release-type">
+                                        <p>COMING SOON</p>
+                                    </div>
+                                    <div class="movie-title">
+                                        <h2>Kin</h2>
+                                    </div>
+                                    <div class="movie-desc">
+                                        <p>Chased by a vengeful criminal, the feds and a gang of otherworldly soldiers, a recently released ex-con, and his adopted teenage brother are forced to go on the run with a weapon of mysterious origin as their only protection.</p>
+                                    </div>
+                                    <button class="coming-soon-btn-hero">Coming Soon</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="img/christopherrobin-hero.jpg" alt="Third slide">
+                            <div class="carousel-item-div">
+                                <div class="hero-txt">
+                                    <div class="release-type">
+                                        <p>OUT NOW</p>
+                                    </div>
+                                    <div class="movie-title">
+                                        <h2>Chrostopher Robin</h2>
+                                    </div>
+                                    <div class="movie-desc">
+                                        <p>A working-class family man, Christopher Robin, encounters his childhood friend Winnie-the-Pooh, who helps him to rediscover the joys of life.</p>
+                                    </div>
+                                    <button class="btn-hero">Get Tickets</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <img aria-hidden="true" src="img/next.svg" height="20">
+                    </div>
+                    <div class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <img aria-hidden="true" src="img/next.svg" height="20">
+                    </div>
+                </div>
+            </section>
+            <section class="whats-on" id="movie-div">
+                <div class="movie-header" id="test">
+                    <h2>What's On?</h2>
+                    <div class="sort-btn-div">
+                        <input class="sort-btn active" type="button" value="All">
+                        <input class="sort-btn" type="button" value="2D">
+                        <input class="sort-btn" type="button" value="3D">
+                        <input class="sort-btn" type="button" value="4DX">
+                        <input class="sort-btn" type="button" value="IMAX">
+                        <input class="sort-btn" type="button" value="DBOX">
+                        <input class="sort-btn" type="button" value="VIP">
+                    </div>
+                </div>
+                <div class="owl-container">
+                    <div class="owl-carousel owl-theme">
+                        <div class="item active">
+                            <div class="movie-item">
+                                <div class="movie-poster-owl">
+                                    <img id="img" src="img/movie-poster/ant-man-and-the-wasp.jpg">
+                                </div>
+                                <div class="movie-title-owl">
+                                    <h3>Ant-Man and the Wasp</h3>
+                                </div>
+                                <div class="movie-info-owl">
+                                    <span>2 HR 5 MIN | 12A</span>
+                                </div>
+                                <div class="movie-release-owl">
+                                    <span>Realease July 4</span>
+                                </div>
+                                <div class="get-tickets-owl">
+                                    <button class="btn-owl">Get Tickets</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="movie-item">
+                                <div class="movie-poster-owl">
+                                    <img src="img/movie-poster/incredibles-2.jpg">
+                                </div>
+                                <div class="movie-title-owl">
+                                    <h3>Incredbiles 2</h3>
+                                </div>
+                                <div class="movie-info-owl">
+                                    <span>2 HR 5 MIN | PG</span>
+                                </div>
+                                <div class="movie-release-owl">
+                                    <span>Realease July 13</span>
+                                </div>
+                                <div class="get-tickets-owl">
+                                    <button class="btn-owl">Get Tickets</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="movie-item">
+                                <div class="movie-poster-owl">
+                                    <img src="img/movie-poster/jurassic-world.jpg">
+                                </div>
+                                <div class="movie-title-owl">
+                                    <h3>Jurassic World: Fallen Kingdom</h3>
+                                </div>
+                                <div class="movie-info-owl">
+                                    <span>2 HR 10 MIN | 12A</span>
+                                </div>
+                                <div class="movie-release-owl">
+                                    <span>Realease June 6</span>
+                                </div>
+                                <div class="get-tickets-owl">
+                                    <button class="btn-owl">Get Tickets</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="movie-item">
+                                <div class="movie-poster-owl">
+                                    <img src="img/movie-poster/the-meg.jpg">
+                                </div>
+                                <div class="movie-title-owl">
+                                    <h3>The Meg</h3>
+                                </div>
+                                <div class="movie-info-owl">
+                                    <span>1 HR 52 MIN | 12A</span>
+                                </div>
+                                <div class="movie-release-owl">
+                                    <span>Realease August 10</span>
+                                </div>
+                                <div class="get-tickets-owl">
+                                    <button class="btn-owl">Get Tickets</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="movie-item">
+                                <div class="movie-poster-owl">
+                                    <img src="img/movie-poster/christopher-robin.jpg">
+                                </div>
+                                <div class="movie-title-owl">
+                                    <h3>Christopher Robin</h3>
+                                </div>
+                                <div class="movie-info-owl">
+                                    <span>1 HR 43 MIN | PG</span>
+                                </div>
+                                <div class="movie-release-owl">
+                                    <span>Realease August 17</span>
+                                </div>
+                                <div class="get-tickets-owl">
+                                    <button class="btn-owl">Get Tickets</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="movie-item">
+                                <div class="movie-poster-owl">
+                                    <img src="img/movie-poster/hotel-3.jpg">
+                                </div>
+                                <div class="movie-title-owl">
+                                    <h3>Hotel Transylvania 3: Summer Vacation</h3>
+                                </div>
+                                <div class="movie-info-owl">
+                                    <span>1 HR 37 MIN | PG</span>
+                                </div>
+                                <div class="movie-release-owl">
+                                    <span>Realease July 27</span>
+                                </div>
+                                <div class="get-tickets-owl">
+                                    <button class="btn-owl">Get Tickets</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="movie-item">
+                                <div class="movie-poster-owl">
+                                    <img src="img/movie-poster/the-equalizer.jpg">
+                                </div>
+                                <div class="movie-title-owl">
+                                    <h3>The Equalizer 2</h3>
+                                </div>
+                                <div class="movie-info-owl">
+                                    <span>2 HR 12 MIN | 15</span>
+                                </div>
+                                <div class="movie-release-owl">
+                                    <span>Realease August 17</span>
+                                </div>
+                                <div class="get-tickets-owl">
+                                    <button class="btn-owl">Get Tickets</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div id="movie-item">
+                                <div class="movie-poster-owl">
+                                    <img src="img/movie-poster/blackkklansman.jpg">
+                                </div>
+                                <div class="movie-title-owl">
+                                    <h3>BlacKkKlansman</h3>
+                                </div>
+                                <div class="movie-info-owl">
+                                    <span>2 HR 16 MIN | 15</span>
+                                </div>
+                                <div class="movie-release-owl">
+                                    <span>Realease August 24</span>
+                                </div>
+                                <div class="get-tickets-owl">
+                                    <button class="btn-owl">Get Tickets</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="movie-item">
+                                <div class="movie-poster-owl">
+                                    <img src="img/movie-poster/dark-web.jpg">
+                                </div>
+                                <div class="movie-title-owl">
+                                    <h3>Unfriended: Dark Web</h3>
+                                </div>
+                                <div class="movie-info-owl">
+                                    <span>1 HR 33 MIN | 15</span>
+                                </div>
+                                <div class="movie-release-owl">
+                                    <span>Realease August 10</span>
+                                </div>
+                                <div class="get-tickets-owl">
+                                    <button class="btn-owl">Get Tickets</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="movie-item">
+                                <div class="movie-poster-owl">
+                                    <img src="img/movie-poster/avengers.jpg">
+                                </div>
+                                <div class="movie-title-owl">
+                                    <h3>Marvel Studios 10th: The Avengers</h3>
+                                </div>
+                                <div class="movie-info-owl">
+                                    <span>2 HR 23 MIN | 12A</span>
+                                </div>
+                                <div class="movie-release-owl">
+                                    <span>Realease August 30</span>
+                                </div>
+                                <div class="get-tickets-owl">
+                                    <button class="btn-owl">Get Tickets</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="movie-item">
+                                <div class="movie-poster-owl">
+                                    <img src="img/movie-poster/avengers-civil-war.jpg">
+                                </div>
+                                <div class="movie-title-owl">
+                                    <h3>Marvel Studios 10th: Captain America: Civil War</h3>
+                                </div>
+                                <div class="movie-info-owl">
+                                    <span>2 HR 28 MIN | 12A</span>
+                                </div>
+                                <div class="movie-release-owl">
+                                    <span>Realease August 30</span>
+                                </div>
+                                <div class="get-tickets-owl">
+                                    <button class="btn-owl">Get Tickets</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="movie-item">
+                                <div class="movie-poster-owl">
+                                    <img src="img/movie-poster/avengers-iw.jpg">
+                                </div>
+                                <div class="movie-title-owl">
+                                    <h3>Marvel Studios 10th: Avengers: Infinity War</h3>
+                                </div>
+                                <div class="movie-info-owl">
+                                    <span>2 HR 30 MIN | 12A</span>
+                                </div>
+                                <div class="movie-release-owl">
+                                    <span>Realease August 30</span>
+                                </div>
+                                <div class="get-tickets-owl">
+                                    <button class="btn-owl">Get Tickets</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="movie-item">
+                                <div class="movie-poster-owl">
+                                    <img src="img/movie-poster/guardians-2.jpg">
+                                </div>
+                                <div class="movie-title-owl">
+                                    <h3>Marvel Studios 10th: Guardians of the Galaxy Vol. 2</h3>
+                                </div>
+                                <div class="movie-info-owl">
+                                    <span>2 HR 30 MIN | 12A</span>
+                                </div>
+                                <div class="movie-release-owl">
+                                    <span>Realease August 30</span>
+                                </div>
+                                <div class="get-tickets-owl">
+                                    <button class="btn-owl">Get Tickets</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="owl-nav">
+                    <div class="prev-btn-owl"><img src="img/next.svg" height="20"></div>
+                    <div class="nxt-btn-owl"><img src="img/next.svg" height="20"></div>
+                </div>
+            </section>
+            <section class="about-us">
+                <div class="about">
+                    <img class="about-left-img" src="img/4dx.jpg">
+                    <div class="about-left-txt">
+                        <h2>The most innovative cinematic experience.</h2>
+                        <p>4DX is the ultimate in state-of-the-art technology delivering a fully immersive cinematic expiernce, providing a revolutionary cinematic experience which stimulates all five senses.</p>
+                        <button class="learn-more-btn">Learn More</button>
+                    </div>
+                </div>
+                <div class="about">
+                    <img class="about-right-img" src="img/food-drinks.jpg">
+                    <div class="about-right-txt">
+                        <h2>Good food, good beer and good film.</h2>
+                        <p>When you see a movie at LEGEND, you get cold drinks, delicious meals and tasty local beers, brought to your seat by a server.</p>
+                        <button class="learn-more-btn">Learn More</button>
+                    </div>
+                </div>
+                <div class="about">
+                    <img class="about-left-img" src="img/marvel-10th.jpg">
+                    <div class="about-left-txt">
+                        <h2>Marvel Studios 10th Anniversary Film Festival.</h2>
+                        <p>The entire Marvel Cinematic Universe is returning to LEGEND. All 20 world-saving, villain-thwarting movies will be presented in IMAX over one epic week.</p>
+                        <button class="learn-more-btn">Learn More</button>
+                    </div>
+                </div>
+                <div class="see-more-link"><span class="see-more-txt">See More Offers &amp; Promotions</span><span class="see-more-arrow">></span></div>
+            </section>
+        </main>
+        <footer>
+            <div class="footer-wrapper">
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h3>About Legend</h3>
+                        <a href="#">About us</a>
+                        <a href="#">Offers &amp; promotions</a>
+                        <a href="#">Advertising</a>
+                        <a href="#">Careers</a>
+                        <a href="#">LEGEND Gold</a>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Get in Touch</h3>
+                        <a href="#">FAQ</a>
+                        <a href="#">Contact us</a>
+                        <a href="#">Give us feedback</a>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Movies</h3>
+                        <a href="#">Find a movie</a>
+                        <a href="#">Ratings information</a>
+                        <a href="#">IMAX</a>
+                        <a href="#">4DX</a>
+                        <a href="#">D-BOX</a>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Legal</h3>
+                        <a href="#">Terms &amp; conditions</a>
+                        <a href="#">Your privacy</a>
+                        <a href="#">Accessibility</a>
+                    </div>
+                </div>
+                <div class="footer-logo">
+                    <img src="img/LEGEND-logo-white.svg" height="30">
+                </div>
+                <div class="social-links">
+                    <img src="img/social/facebook.svg" height="20">
+                    <img src="img/social/twitter.svg" height="20">
+                    <img src="img/social/instagram.svg" height="20">
+                    <img src="img/social/youtube.svg" height="20">
+                    <img src="img/social/linkedin.svg" height="20">
+                    <img src="img/social/pinterest.svg" height="20">
+                </div>
+                <div class="copyright">
+                    <span>&copy; Legend Cinemas 2018. All rights reserved.</span>
+                </div>
+            </div>
+        </footer>
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="OwlCarousel2-2.3.4/docs/assets/vendors/jquery.min.js" type="application/javascript"></script>
+        <script src="OwlCarousel2-2.3.4/dist/owl.carousel.js" type="application/javascript"></script>
+        <script src="js.js"></script>
+    </body>
+</html>
