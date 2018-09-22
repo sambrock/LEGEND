@@ -859,7 +859,9 @@ footer{
         height: auto;
     }
     .search-icon{
+        margin-top: 10px;
         height: 30px;
+        padding: 0;
     }
     header nav ul li{
         width: ;
@@ -873,7 +875,6 @@ footer{
     }
     .release-type p{
         font-size: 13px;
-
     }
     .hero-txt button{
         margin-top: 10px;
@@ -903,11 +904,13 @@ footer{
         visibility: hidden !important;
     }
 }
+/*
 @media (max-width: 500px){
-    .movie-header{
-        display: inline-block;
-    }
-    .movie-header h3{
-        font-size: 25px;
-    }
+.movie-header{
+display: inline-block;
 }
+.movie-header h3{
+font-size: 25px;
+}
+}
+*/
