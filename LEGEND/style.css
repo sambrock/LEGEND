@@ -31,7 +31,6 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    padding: 0 5px;
     height: 50px;
     position: relative;
 }
@@ -334,6 +333,10 @@ main.active{
 .over-18s::after{
     content:"   Over 18s";
     color: #a9a9a9;
+}
+
+#burger-nav{
+    display: none;
 }
 
 /*hero*/
@@ -828,26 +831,21 @@ footer{
 
 /* mobiles */
 @media (max-width: 850px){
-    #burger-nav{
-        display: block;
-        height: 35px;
-        width: 35px;
-        background: url(img/menu.svg) no-repeat center;
-        cursor: pointer;
-        margin-top: 7px;
+    /*header*/
+    .header-container{
+        justify-content: right;
+        max-width: 850px;
+        padding: 0 15px;
     }
-    #burger-nav.on{
-        background-color: ;
+    .logo img{
+        margin: 0;
     }
-    #cross-nav{
-        background: url(img/cross.png) no-repeat;
-        background-size: 30px 30px;
-        position: absolute;
-        height: 30px;
-        width: 30px;
-        right: 2%;
-        top: 10px;
-        cursor: pointer;
+    main{
+        margin: 0;
+        padding: 0;
+    }
+    header{
+        position: relative;
     }
     header nav ul{
         overflow: hidden;
@@ -862,6 +860,7 @@ footer{
         margin-top: 10px;
         height: 30px;
         padding: 0;
+        float: left;
     }
     header nav ul li{
         width: ;
@@ -870,6 +869,11 @@ footer{
     .quick-book{
         display: none;
     }
+    #burger-nav{
+        display: block;
+        margin-top: 7px;
+    }
+    /*hero*/
     .movie-title h2{
         font-size: 35px;
     }
@@ -895,8 +899,44 @@ footer{
     .release-type{
         margin-bottom: 0px;
     }
+    /*what's on*/
+    .whats-on{
+        min-height: 700px;
+        background-size: 100% 100%;
+    }
+    .sort-btn-div{
+        display: none;
+    }
+    .movie-header{
+        padding: 50px 15px 0;
+    }
+    .movie-header h2{
+        font-size: 30px;
+    }
     .item{
         max-width: 100%;
+    }
+    .movie-title-owl h3{
+        font-size: 20px;
+    }
+    .movie-info-owl span, .movie-release-owl span{
+        font-size: 15px;
+    }
+    /*about us*/
+    .about-us{
+        width: 100%;
+    }
+    .about-left-img, .about-right-img{
+        width: 100%;
+    }
+    .about-left-txt, .about-right-txt{
+        float: none;
+        margin: 0 0 0 15px;
+        width: 100%;
+    }
+    /*footer*/
+    footer{
+        display: none;
     }
 }
 @media (min-width: 850px){
